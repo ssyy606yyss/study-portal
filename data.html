@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>データ管理 | 学習ポータル</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="index.html">📚 学習ポータル</a>
+    <nav aria-label="メインメニュー">
+      <ul class="menu">
+        <li><a href="materials/index.html">授業資料</a></li>
+        <li><a href="study/index.html">勉強記録</a></li>
+        <li><a href="books/index.html">読書</a></li>
+        <li><a href="certs/index.html">資格</a></li>
+        <li><a href="tools/index.html">業務ツール</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="theme-toggle">🌙 ダーク</button>
+  </header>
+
+  <main id="main-content">
+    <h1>データ管理(バックアップ)</h1>
+    <p>記録は、このブラウザの中(localStorage)にだけ保存されています。ブラウザのデータを消したり、別のパソコンに移ったりすると見えなくなるので、<strong>ときどき書き出して</strong>ファイルとして保管してください。</p>
+    <noscript><p class="message-error">このページはJavaScriptを使います。JavaScriptを有効にしてください。</p></noscript>
+
+    <h2>いま保存されているデータ</h2>
+    <ul id="counts" class="summary"></ul>
+
+    <h2>書き出し</h2>
+    <p><button type="button" id="export-btn" class="button">JSONファイルとして書き出す</button></p>
+
+    <h2>読み込み(復元)</h2>
+    <p class="note">書き出したファイルを選ぶと、現在のデータが置き換わります。</p>
+    <div class="field">
+      <label for="import-file">バックアップファイル(.json)</label>
+      <input type="file" id="import-file" accept=".json,application/json">
+    </div>
+    <p><button type="button" id="import-btn" class="button button-secondary">読み込む</button></p>
+    <p id="message" role="status"></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>自分用の学習サイト(作りながら育てています) / <a href="data.html">データ管理(バックアップ)</a></p>
+  </footer>
+
+  <script src="js/defs.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/backup.js"></script>
+</body>
+</html>

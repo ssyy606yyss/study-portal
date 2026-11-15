@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勉強記録 | 学習ポータル</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">📚 学習ポータル</a>
+    <nav aria-label="メインメニュー">
+      <ul class="menu">
+        <li><a href="../materials/index.html">授業資料</a></li>
+        <li><a href="../study/index.html" aria-current="page">勉強記録</a></li>
+        <li><a href="../books/index.html">読書</a></li>
+        <li><a href="../certs/index.html">資格</a></li>
+        <li><a href="../tools/index.html">業務ツール</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="theme-toggle">🌙 ダーク</button>
+  </header>
+
+  <main id="main-content">
+    <h1>勉強記録</h1>
+    <p><a class="button" href="add.html">＋ 記録を追加する</a></p>
+    <noscript><p class="message-error">このページはJavaScriptを使います。JavaScriptを有効にしてください。</p></noscript>
+
+    <h2>集計</h2>
+    <ul id="totals" class="summary"></ul>
+
+    <h2>科目別の勉強時間</h2>
+    <div class="toolbar">
+      <div class="field">
+        <label for="period">期間</label>
+        <select id="period">
+          <option value="all">全期間</option>
+          <option value="month">今月</option>
+          <option value="week">今週</option>
+        </select>
+      </div>
+    </div>
+    <div id="chart"></div>
+
+    <h2>記録の一覧(新しい順)</h2>
+    <div id="list"></div>
+    <p id="message" role="status"></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>自分用の学習サイト(作りながら育てています) / <a href="../data.html">データ管理(バックアップ)</a></p>
+  </footer>
+
+  <script src="../js/defs.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/study.js"></script>
+</body>
+</html>

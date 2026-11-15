@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学習ポータル</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="index.html">📚 学習ポータル</a>
+    <nav aria-label="メインメニュー">
+      <ul class="menu">
+        <li><a href="materials/index.html">授業資料</a></li>
+        <li><a href="study/index.html">勉強記録</a></li>
+        <li><a href="books/index.html">読書</a></li>
+        <li><a href="certs/index.html">資格</a></li>
+        <li><a href="tools/index.html">業務ツール</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="theme-toggle">🌙 ダーク</button>
+  </header>
+
+  <main id="main-content">
+    <h1>学習ポータルへようこそ</h1>
+    <p>授業資料のURL置き場と、勉強・読書・資格・業務ツールの記録帳です。</p>
+    <noscript><p class="message-error">このページはJavaScriptを使います。JavaScriptを有効にしてください。</p></noscript>
+
+    <h2>入口</h2>
+    <ul class="cards">
+      <li>
+        <a href="materials/index.html">
+          <strong>授業資料</strong>
+          <span>数学・物理・化学などの資料URLをまとめる</span>
+        </a>
+      </li>
+      <li>
+        <a href="study/index.html">
+          <strong>勉強記録</strong>
+          <span>日付・科目・時間・内容を記録する</span>
+        </a>
+      </li>
+      <li>
+        <a href="books/index.html">
+          <strong>読書</strong>
+          <span>読書記録と本の紹介</span>
+        </a>
+      </li>
+      <li>
+        <a href="certs/index.html">
+          <strong>資格</strong>
+          <span>試験日・学習進捗・模試の記録</span>
+        </a>
+      </li>
+      <li>
+        <a href="tools/index.html">
+          <strong>業務ツール</strong>
+          <span>使ったツールの用途・メモ</span>
+        </a>
+      </li>
+    </ul>
+
+    <h2>いまの状況</h2>
+    <ul id="summary" class="summary"></ul>
+
+    <h2>最近の勉強記録</h2>
+    <div id="recent"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>自分用の学習サイト(作りながら育てています) / <a href="data.html">データ管理(バックアップ)</a></p>
+  </footer>
+
+  <script src="js/defs.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

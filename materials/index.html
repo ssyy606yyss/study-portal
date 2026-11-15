@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>授業資料 | 学習ポータル</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">📚 学習ポータル</a>
+    <nav aria-label="メインメニュー">
+      <ul class="menu">
+        <li><a href="../materials/index.html" aria-current="page">授業資料</a></li>
+        <li><a href="../study/index.html">勉強記録</a></li>
+        <li><a href="../books/index.html">読書</a></li>
+        <li><a href="../certs/index.html">資格</a></li>
+        <li><a href="../tools/index.html">業務ツール</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="theme-toggle">🌙 ダーク</button>
+  </header>
+
+  <main id="main-content">
+    <h1>授業資料</h1>
+    <p>授業資料などのURLをまとめておく場所です。(ファイルそのものは置かず、URLだけ保管します)</p>
+    <noscript><p class="message-error">このページはJavaScriptを使います。JavaScriptを有効にしてください。</p></noscript>
+
+    <nav id="field-nav" class="tabs" aria-label="分野"></nav>
+
+    <div class="toolbar">
+      <div class="field">
+        <label for="q">キーワードで探す</label>
+        <input type="search" id="q" maxlength="100">
+      </div>
+      <label class="check"><input type="checkbox" id="fav-only"> ★のみ表示</label>
+    </div>
+
+    <div id="list"></div>
+    <p id="message" role="status"></p>
+
+    <details id="form-details" class="panel">
+      <summary>リンクを追加する</summary>
+      <div id="form-area"></div>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <p>自分用の学習サイト(作りながら育てています) / <a href="../data.html">データ管理(バックアップ)</a></p>
+  </footer>
+
+  <script src="../js/defs.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/form.js"></script>
+  <script src="../js/materials.js"></script>
+</body>
+</html>
